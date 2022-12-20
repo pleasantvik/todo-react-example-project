@@ -1,4 +1,5 @@
 import { Header } from "./components/Header";
+import { TodoList } from "./components/TodoList";
 
 //COMPONENT START
 const App = () => {
@@ -32,11 +33,9 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <ul>
-        {DUMMY_DATA.map((todo) => (
-          <li key={todo.id}>{todo.title}</li>
-        ))}
-      </ul>
+      <div>
+        <TodoList todos={DUMMY_DATA} />
+      </div>
     </div>
   );
 };
