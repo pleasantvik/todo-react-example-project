@@ -1,3 +1,6 @@
+import { Header } from "./components/Header";
+
+//COMPONENT START
 const App = () => {
   const DUMMY_DATA = [
     {
@@ -26,7 +29,16 @@ const App = () => {
   // The first thine we want to do is display the title in the UI.
   // To accomplish this we use the map method available on every JS object
 
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Header />
+      <ul>
+        {DUMMY_DATA.map((todo) => (
+          <li key={todo.id}>{todo.title}</li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default App;
